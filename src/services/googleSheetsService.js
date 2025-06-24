@@ -1,5 +1,6 @@
 import path from 'path';
 import { google } from 'googleapis';
+import config from '../../src/config/env.js';
 
 const sheets = google.sheets('v4');
 
@@ -30,7 +31,7 @@ const appendToSheet = async (data) =>{
         })
 
         const authClient = await auth.getClient();
-        const spreadsheetId = '1HH_66Pxg9OXwP2-ceQmD274rY9hIh9694wr73ebIOHI';
+        const spreadsheetId = config.SPREADSHEET_ID;
 
         await addRowToSheet(authClient, spreadsheetId, data);
         

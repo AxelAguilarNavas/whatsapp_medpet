@@ -9,5 +9,6 @@ export default {
   API_VERSION: process.env.API_VERSION,
   PORT: process.env.PORT || 3000,
   CHATGPT_API_KEY: process.env.CHATGPT_API_KEY,
-  BASE_URL: process.env.BASE_URL
+  BASE_URL: process.env.BASE_URL,
+  SPREADSHEET_ID: process.env.SPREADSHEET_ID
 };
